@@ -1,5 +1,5 @@
 # .NET CORE WEB API + MongoDB
-- Has connection between .NET and MySQL Server
+- Has connection between .NET and MongoDB
 
 - REST API
 
