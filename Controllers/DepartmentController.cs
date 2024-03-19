@@ -9,12 +9,8 @@ namespace ASP_MongoDB.Controllers
     public class DepartmentController : ControllerBase {
         private readonly IConfiguration _configuration;
         
-        // Thông tin thư mục gốc, tên môi trường, ...
-        private readonly IWebHostEnvironment _environment;
-
-        public DepartmentController(IConfiguration configuration, IWebHostEnvironment environment) {
+        public DepartmentController(IConfiguration configuration) {
             _configuration = configuration;
-            _environment = environment;
         }
 
         [HttpGet]

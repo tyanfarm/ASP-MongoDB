@@ -26,14 +26,14 @@ app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(
 // Quản lí các 'Route' attribute
 app.MapControllers();
 
-// // Cấu hình lưu file ảnh
-// app.UseStaticFiles(new StaticFileOptions {
-//     FileProvider = new PhysicalFileProvider(
-//         // Đường dẫn đến thư mục Photos để làm việc
-//         Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
-//     // Khi có 1 yêu cầu gửi đến /Photos/ thì Middleware sẽ tìm tệp trong thư mục Photos
-//     RequestPath = "/Photos"
-// }); 
+// Cấu hình lưu file ảnh
+app.UseStaticFiles(new StaticFileOptions {
+    FileProvider = new PhysicalFileProvider(
+        // Đường dẫn đến thư mục Photos để làm việc
+        Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+    // Khi có 1 yêu cầu gửi đến /Photos/ thì Middleware sẽ tìm tệp trong thư mục Photos
+    RequestPath = "/Photos"
+}); 
 
 app.MapGet("/", () => "Hello World!");
 
